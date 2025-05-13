@@ -1,0 +1,621 @@
+.orders-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #333;
+}
+
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.orders-header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.order-count {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.order-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 12px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.tab-button.active {
+  background-color: #f0f7ff;
+  color: black;
+  font-weight: 600;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  transition: box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.order-summary:hover {
+  background-color: #f9f9f9;
+}
+
+.order-info {
+  flex: 1;
+}
+
+.order-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.order-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background-color: #fff8e6;
+  color: #b7791f;
+}
+
+.status-shipped {
+  background-color: #e6f2ff;
+  color: #1e70bf;
+}
+
+.status-delivered {
+  background-color: #e6f9ef;
+  color: #2c7a51;
+}
+
+.order-meta {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+}
+
+.meta-item {
+  display: flex;
+  gap: 6px;
+}
+
+.meta-label {
+  color: #666;
+}
+
+.meta-value {
+  font-weight: 500;
+  color: #333;
+}
+
+.meta-value.price {
+  font-weight: 600;
+  color: #111;
+}
+
+.expand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #666;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.order-details {
+  padding: 0 20px 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.order-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0;
+  padding: 0 10px;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  flex: 1;
+}
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #999;
+  font-size: 16px;
+  margin-bottom: 8px;
+  border: 2px solid #eaeaea;
+}
+
+.timeline-step.completed .step-icon {
+  background-color: #e6f9ef;
+  color: #2c7a51;
+  border-color: #2c7a51;
+}
+
+.step-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+}
+
+.timeline-step.completed .step-label {
+  color: #2c7a51;
+}
+
+.timeline-connector {
+  height: 2px;
+  background-color: #eaeaea;
+  flex-grow: 1;
+  margin: 0 4px;
+  transform: translateY(-16px);
+}
+
+.items-heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 24px 0 16px;
+  color: #333;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.item-image-container {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.order-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.order-item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-item-details h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 12px;
+  color: #333;
+}
+
+.item-attributes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.attribute {
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.attribute-label {
+  color: #666;
+}
+
+.attribute-value {
+  font-weight: 500;
+  color: #333;
+}
+
+.item-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.item-subtotal {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.order-summary-footer {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #eaeaea;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.summary-row.total {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #eaeaea;
+}
+
+.order-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.action-button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-button.primary {
+  background-color: black; /* Set the background color to black */
+  color: white; /* Set the text color to white */
+  border: none; /* Remove any border */
+  padding: 10px 20px; /* Add padding for better spacing */
+  border-radius: 5px; /* Add rounded corners */
+  font-size: 14px; /* Set font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.action-button.primary:hover {
+  background-color: #333; /* Slightly lighten the black on hover */
+}
+
+.action-button.secondary {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.action-button.secondary:hover {
+  background-color: #f5f5f5;
+}
+
+.empty-orders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.empty-orders h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 16px;
+  color: #666;
+}
+
+.empty-orders p {
+  color: #888;
+  max-width: 400px;
+  margin: 0;
+}
+
+.view-all-button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-all-button:hover {
+  background-color: #eaeaea;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #0066ff;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.error-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #fff0f0;
+  color: #e53e3e;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.error-message {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.retry-button {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.retry-button:hover {
+  background-color: #0055cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .orders-page {
+    padding: 20px 15px;
+  }
+  
+  .order-tabs {
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .tab-button {
+    padding: 8px 14px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  .order-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .order-item {
+    flex-direction: column;
+  }
+  
+  .item-image-container {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .order-actions {
+    flex-direction: column;
+  }
+  
+  .action-button {
+    width: 100%;
+  }
+}
+
+
+/* Cancel Modal Styles */
+.cancel-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.modal-content textarea {
+  width: 80%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: none;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.modal-content textarea:focus {
+  border-color: black; /* Highlight border on focus */
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-actions button:first-child {
+  background-color: black; /* Primary button */
+  color: #fff;
+}
+
+
+.modal-actions button:last-child {
+  background-color: #f5f5f5; /* Secondary button */
+  color: #333;
+}
+
+.modal-actions button:last-child:hover {
+  background-color: #e0e0e0;
+}
+
+/* Cancel Button Styles */
+.cancel-button {
+  background-color: #ff4d4f; /* Red color */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cancel-button:hover {
+  background-color: #d9363e; /* Darker red on hover */
+}
+
+.cancel-button:active {
+  transform: scale(0.98); /* Slightly shrink on click */
+}

@@ -1,0 +1,186 @@
+.home-page {
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is applied */
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Section Styles */
+  .section {
+    margin-bottom: 40px;
+  }
+  
+/* Best Sellers Section */
+.best-sellers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.best-sellers-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    width: 80%; /* Adjust the width of the box */
+    height: auto; /* Allow height to adjust dynamically */
+    border: 1px solid #ddd;
+    overflow: hidden;
+    margin: 63px;
+}
+
+/* Left Half: Text */
+.best-sellers-text {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f9f9f9;
+    text-align: center; /* Center-align text for smaller screens */
+}
+
+.best-sellers-text h2 {
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.best-sellers-text p {
+    font-size: 24px;
+}
+
+/* Right Half: Photo */
+.best-sellers-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.best-sellers-photo img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .best-sellers-container {
+        flex-direction: column; /* Stack text and photo vertically */
+        width: 100%; /* Full width for smaller screens */
+        margin: 20px 0; /* Reduce margin */
+    }
+
+    .best-sellers-text {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .best-sellers-text h2 {
+        font-size: 40px; /* Reduce font size */
+    }
+
+    .best-sellers-text p {
+        font-size: 18px; /* Reduce font size */
+    }
+
+    .best-sellers-photo img {
+        width: 100%; /* Full width for images */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .best-sellers-text h2 {
+        font-size: 30px; /* Further reduce font size */
+    }
+
+    .best-sellers-text p {
+        font-size: 16px; /* Further reduce font size */
+    }
+
+    .best-sellers-container {
+        margin: 10px 0; /* Further reduce margin */
+    }
+}
+
+  .section h2 {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is applied */
+    margin-bottom: 60px;
+  }
+  
+  .latest-product {
+    flex: 1;
+    text-align: left;
+    border: 1px solid black;
+  }
+  
+  .latest-product img {
+    width: 100%;
+    max-width: 300px;
+    height:100%;
+    max-height: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .latest-product h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .latest-product p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Latest Collection and Discounted Products */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-item {
+    text-align: left;
+    padding: 10px;
+    transition: transform 0.3s;
+  }
+
+  
+  .product-item img {
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    height: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .product-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .product-item p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: red;
+  }
+  
+  .discounted-price {
+    color: green;
+    font-weight: bold;
+  }
+
+
+  .product-link {
+    text-decoration: none;
+    color: black;
+  }

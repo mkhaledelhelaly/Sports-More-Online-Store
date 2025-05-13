@@ -1,0 +1,261 @@
+.nav {
+    position: fixed; /* Fix the nav bar at the top */
+    top: 0;
+    left: 50%; /* Center the navbar horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 100%; /* Slightly reduce the width of the navbar */
+    max-width: 1850px; /* Limit the navbar width on larger screens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Consistent padding for the navbar */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensure it stays above other elements */
+  }
+  
+  .nav-logo {
+    flex: 1; /* Allow the logo to take up space on the left */
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+  }
+  
+  .logo {
+    height: 40px; /* Adjust the size of the logo */
+    width: 40px; /* Make the width equal to the height for a perfect circle */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    border-radius: 50%; /* Make the logo circular */
+    display: block; /* Ensure the image is visible */
+  }
+  
+  /* Default state for nav-links (visible on larger screens) */
+  .nav-links {
+    display: flex; /* Always show nav-links on larger screens */
+    flex-direction: row; /* Align links horizontally */
+    gap: 20px; /* Add spacing between links */
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 25px;
+  }
+  
+  .nav-links li a.active {
+    text-decoration: underline; /* Underline the active link */
+    font-weight: bold; /* Optional: Make the active link bold */
+    color: #000; /* Optional: Change the color of the active link */
+  }
+  
+  .nav-icons {
+    flex: 1; /* Push the icons to the right */
+    display: flex;
+    justify-content: flex-end; /* Align icons to the right */
+    align-items: center; /* Center icons vertically */
+    gap: 15px;
+  }
+  
+  .icon {
+    font-size: 20px; /* Adjust the size of the icons */
+    cursor: pointer;
+    color: #333;
+    display: inline-block; /* Ensure icons are visible */
+  }
+
+/* General nav-item styles */
+.nav-item {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Highlight on hover */
+.nav-item:hover {
+  color: black; /* Highlight text color */
+  border-radius: 4px; /* Optional: Add rounded corners */
+}
+
+/* Active link styles */
+.nav-item.active {
+  color: #fff; /* Active text color */
+  border-radius: 4px; /* Optional: Add rounded corners */
+}
+
+/* Profile dropdown container */
+.profile-icon-container {
+  position: relative;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 30px; /* Adjust to position below the icon */
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+  width: 150px;
+  padding: 10px 0;
+}
+
+/* Dropdown item */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Dropdown icons */
+.dropdown-icon {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Search Icon */
+.search-icon {
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.search-icon:hover {
+  color: #333;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 200px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: width 0.3s ease;
+}
+
+.search-bar:focus {
+  width: 200px; /* Expand the search bar on focus */
+  border-color: black;
+}
+
+.dropdown-profile-picture {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.cart-icon-container {
+    position: relative;
+}
+
+.cart-count-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none; /* Hide the hamburger menu by default */
+    font-size: 25px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-logo {
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default on smaller screens */
+        flex-direction: column; /* Stack links vertically when visible */
+        align-items: flex-start;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        padding: 10px 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.open {
+        display: flex; /* Show links when the menu is open */
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 20px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-icons {
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block; /* Display the hamburger menu */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        display: none; /* Hide links on very small screens */
+    }
+
+    .nav-icons {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+}

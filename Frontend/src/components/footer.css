@@ -1,0 +1,93 @@
+/* Footer Container */
+.footer {
+    color: black;
+    padding: 20px 50px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is applied */
+  }
+
+  #root {
+    flex: 1; /* Pushes the footer to the bottom when content is short */
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    margin: 0;
+  }
+  
+  /* Footer Content */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  /* About Us Section */
+  .footer-about {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .footer-about h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-about p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Get in Touch Section */
+  .footer-contact {
+    flex: 1;
+  }
+  
+  .footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-phone {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .footer-phone:hover {
+    text-decoration: underline;
+  }
+  
+  /* Social Icons */
+  .footer-socials {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    font-size: 20px;
+    color: black;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #007bff;
+  }
+  
+  /* Horizontal Line */
+  .footer-line {
+    border: 0;
+    height: 1px;
+    background-color: #555;
+    margin: 20px 0;
+  }
+  
+  /* Copyright Section */
+  .footer-copyright {
+    font-size: 12px;
+    color: #aaa;
+  }
